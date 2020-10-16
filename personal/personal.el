@@ -1,3 +1,6 @@
+;; add some required packages
+(prelude-require-packages '(indent-tools desktop+ org))
+
 ;; set cmd/opt as meta/super
 (when (string= system-type "darwin")
   (setq mac-option-key-is-meta nil)
