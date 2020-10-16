@@ -1,5 +1,5 @@
 ;; add some required packages
-(prelude-require-packages '(indent-tools desktop+ org))
+(prelude-require-packages '(indent-tools desktop+ org multi-vterm))
 
 ;; set cmd/opt as meta/super
 (when (string= system-type "darwin")
@@ -18,16 +18,17 @@
         insert-directory-program "/usr/local/bin/gls"
         dired-listing-switches "-aBhl --group-directories-first"))
 
-(when (memq window-system '(mac ns x))
-  (setq exec-path-from-shell-variables '("PATH" "MANPATH" "VAGRANT_DEFAULT_PROVIDER"))
-                                        ;					 "VAGRANT_VMWARE_CLONE_DIRECTORY"
-                                        ;					 "PAGER"
-                                        ;					 "PROMPT_COMMAND"))
-  (exec-path-from-shell-initialize))
+(when (memq window-system '(ns x))
+(setq exec-path-from-shell-variables '("MANPATH"
+                                       "VAGRANT_DEFAULT_PROVIDER"
+                                       "PAGER")
+      (exec-path-from-shell-initialize))
+
 (require 'indent-tools)
 (global-set-key (kbd "C-c >") 'indent-tools-hydra/body)
 
 ;; add org-mode contrib to emacs lisp load-path
 (add-to-list 'load-path "~/.emacs.d/personal/org/9.4/contrib/lisp" t)
+
 ;; enable confluence exporter
 (require 'ox-confluence)
