@@ -1,5 +1,5 @@
 ;; add some required packages
-(prelude-require-packages '(indent-tools desktop+ org multi-vterm))
+(prelude-require-packages '(indent-tools desktop+ org multi-vterm company-terraform terraform-mode terraform-doc))
 
 ;; set cmd/opt as meta/super
 (when (string= system-type "darwin")
@@ -19,10 +19,8 @@
         dired-listing-switches "-aBhl --group-directories-first"))
 
 (when (memq window-system '(ns x))
-(setq exec-path-from-shell-variables '("MANPATH"
-                                       "VAGRANT_DEFAULT_PROVIDER"
-                                       "PAGER")
-      (exec-path-from-shell-initialize))
+  (setq exec-path-from-shell-variables '("MANPATH" "VAGRANT_DEFAULT_PROVIDER" "PAGER"))
+        (exec-path-from-shell-initialize))
 
 (require 'indent-tools)
 (global-set-key (kbd "C-c >") 'indent-tools-hydra/body)
