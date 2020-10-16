@@ -23,3 +23,8 @@
   (exec-path-from-shell-initialize))
 (require 'indent-tools)
 (global-set-key (kbd "C-c >") 'indent-tools-hydra/body)
+
+;; add org-mode contrib to emacs lisp load-path
+(add-to-list 'load-path "~/.emacs.d/personal/org/9.4/contrib/lisp" t)
+;; enable confluence exporter
+(require 'ox-confluence)
