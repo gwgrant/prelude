@@ -30,3 +30,7 @@
 
 ;; enable confluence exporter
 (require 'ox-confluence)
+
+;; view mode
+(setq view-read-only t)
+(define-key ctl-x-map "\C-q" 'view-mode)
