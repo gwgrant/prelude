@@ -39,7 +39,9 @@
 
 (setq helm-posframe-parameters
       '((left-fringe . 10)
-        (right-fringe . 10)))
+        (right-fringe . 10)
+        (undecorated . nil)
+        (internal-border-width . 5)))
 (setq helm-posframe-poshandler #'posframe-poshandler-window-top-center)
 (setq posframe-mouse-banish nil)
 (helm-posframe-enable)
