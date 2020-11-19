@@ -34,3 +34,15 @@
 ;; view mode
 (setq view-read-only t)
 (define-key ctl-x-map "\C-q" 'view-mode)
+
+;; posframe / helm-posframe
+
+(setq helm-posframe-parameters
+      '((left-fringe . 10)
+        (right-fringe . 10)))
+(setq helm-posframe-poshandler #'posframe-poshandler-window-top-center)
+(setq posframe-mouse-banish nil)
+(helm-posframe-enable)
+
+;; mini-frame-mode
+(mini-frame-mode)
