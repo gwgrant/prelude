@@ -48,3 +48,6 @@
 
 ;; mini-frame-mode
 (mini-frame-mode)
+
+;; blink the cursor
+(blink-cursor-mode)
