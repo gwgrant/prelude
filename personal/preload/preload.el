@@ -1,2 +1,4 @@
 ;;; set theme
-(setq prelude-theme 'anti-zenburn)
+(require 'kaolin-themes)
+(setq prelude-theme 'kaolin-dark)
+(kaolin-treemacs-theme)
