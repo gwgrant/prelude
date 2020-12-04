@@ -54,4 +54,4 @@
 (blink-cursor-mode)
 
 ;; another key binding for ace-window
-(global-set-key (kbd "C-\'") 'ace-window)
+(global-set-key (kbd "s-\'") 'ace-window)
