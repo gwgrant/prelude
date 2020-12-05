@@ -37,21 +37,21 @@
 
 ;; posframe / helm-posframe
 
-(setq helm-posframe-parameters
-      '((left-fringe . 10)
-        (right-fringe . 10)
-        (undecorated . t)
-        (internal-border-width . 5)
-        (min-height . 50)))
-(setq helm-posframe-poshandler #'posframe-poshandler-window-top-center)
-(setq posframe-mouse-banish nil)
-(helm-posframe-enable)
-
-;; mini-frame-mode
-(mini-frame-mode)
+;;(setq helm-posframe-parameters
+;;;;      '((left-fringe . 10)
+;;;;        (right-fringe . 10)
+;;;;        (undecorated . t)
+;;;;        (internal-border-width . 5)
+;;;;        (min-height . 50)))
+;;;;(setq helm-posframe-poshandler #'posframe-poshandler-window-top-center)
+;;;;(setq posframe-mouse-banish nil)
+;;;;(helm-posframe-enable)
+;;;;
+;;;;;; mini-frame-mode
+;;;;(mini-frame-mode)
 
 ;; blink the cursor
 (blink-cursor-mode)
 
-;; another key binding for ace-window
-(global-set-key (kbd "s-\'") 'ace-window)
+;; another key binding for ace-window\
+(global-set-key (kbd "C-#") 'ace-window)
