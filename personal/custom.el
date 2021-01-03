@@ -10,7 +10,7 @@
  '(size-indication-mode t)
  '(tool-bar-mode nil)
  '(treemacs-width 50)
- '(vterm-max-scrollback 50000)
+ '(vterm-max-scrollback 10000)
  '(whitespace-line-column 140)
  '(window-mode-hook (desktop+--term-mode-hook)))
 (custom-set-faces
